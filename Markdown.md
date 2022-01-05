@@ -11,3 +11,15 @@ Size 3 → ###Heading 3
 Size 4 → ####Heading 4
 Size 5→ #####Heading 5
 Min Size 6 → ######Heading 6
+
+
+> Your Quote will be typed here
+For COPYRIGHT sign follow this method.
+&copy;
+
+#Hyperlink
+[YouTube] (https://www.youtube.com “Youtube”)
+
+
+(`code`)
+(```code blocks```)
