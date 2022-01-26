@@ -46,11 +46,6 @@ netsh wlan export profile key=clear folder=C:\temp
 # Gespeicherte Passwörter
 C:\Windows\System32\rundll32.exe keymgr.dll, KRShowKeyMgr
 
-# Internet Zone Assignments
-$(get-item "HKCU:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMapKey").property
-$(get-item "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMapKey").property
-
-
 # Eventlog
 # Letze 10 Application EventLogs anzeigen
 Get-EventLog -Newest 10 -LogName "Application"

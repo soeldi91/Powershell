@@ -23,6 +23,16 @@ Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Internet
 #Type following and press Enter: inetcpl.cpl
 # Change the Proxy settings: Connections -> LAN settings
 
+
+# Internet Zone Assignments
+$(get-item "HKCU:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMapKey").property
+$(get-item "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMapKey").property
+
+
+# Client Netzwerktreiber Metric
+Get-NetIPInterface | Where-Object {$_.InterfaceAlias -contains "Ethernet"} | Set-NetIPInterface -InterfaceMetric 5
+
+
 # Schneller Netzwerkscan
 function Test-Port {
     [CmdletBinding()]
