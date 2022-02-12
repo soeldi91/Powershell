@@ -77,3 +77,7 @@ Test-NetConnection 192.168.0.114
 powercfg.exe list
 powercfg.exe /query
 
+# Regestry bearbeiten
+Set-Location "HKCU:\Software"
+Get-Childitem -Path "HKCU:\Software"
+New-Item -Path "HKCU:\Software\Demontration" -Value "Demo"
