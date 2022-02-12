@@ -105,7 +105,7 @@ gwmi -list|where {$_.name -like "*system*"}
 gwmi -class Win32_BIOS
 gwmi -class Win32_useraccount
 
-# Abkürzkungen .mst
+# Abkürzkungen .msc
 secpol.msc
 gpedit.msc
 ...
