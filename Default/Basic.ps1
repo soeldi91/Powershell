@@ -105,9 +105,21 @@ gwmi -list|where {$_.name -like "*system*"}
 gwmi -class Win32_BIOS
 gwmi -class Win32_useraccount
 
-# Abkürzkungen .msc
-secpol.msc
-gpedit.msc
-...
-                          
+# Abkürzkungen / Programme / run
+secpol.msc      Sicherheitseinstellungen
+gpedit.msc      Gruppenrichtlinien
+dsa.msc         Active Directory-Benutzer und -Computer	
+compmgmt.msc    Computerverwaltung
+diskmgmt.msc    Datenträgerverwaltung
+services.msc    Dienste
+dhcpmgmt.msc    DHCP
+dnsmgmt.msc     DNS
+eventvwr.msc    Ereignisanzeige
+devmgmt.msc     Geräte-Manager
+lusrmgr.msc     Lokale Benutzer und Gruppen
+ncpa.cpl        Netzwerkverbindungen (Adapter)
+appwiz.cpl      Programme und Funktionen
+certmgr.msc     Zertifikat-Manager (User)
+certlm.msc      Zertifikat-Manager (Computer)
+desk.cpl        Anzeigeeinstellungen
 

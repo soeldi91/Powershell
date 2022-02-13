@@ -81,3 +81,11 @@ powercfg.exe /query
 Set-Location "HKCU:\Software"
 Get-Childitem -Path "HKCU:\Software"
 New-Item -Path "HKCU:\Software\Demontration" -Value "Demo"
+## Example
+$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\PassportForWork"
+$registryValueName = "DisablePostLogonProvisioning"
+$registryValueData = "1"
+
+New-Item -Path $registryPath -Force
+New-ItemProperty -Path $registryPath -Name $registryValueName -Value $registryValueData -PropertyType DWORD -Force
+
