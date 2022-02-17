@@ -1,3 +1,10 @@
+# 1. GIT Bash installieren
+
+git config --global --list
+git config --global user.name Damian Soldera
+git config --global user.email damian.soldera@swissic.ch
+git config --global http.sslVerify false
+
 #Repo Klonen
 git clone <URL>
 git pull
