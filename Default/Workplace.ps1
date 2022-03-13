@@ -1,6 +1,10 @@
 #WMI Objekt (Windows Management Instrumentation)
 # Alle Klassen ausgeben (Win32)
 Get-WMIObject -List| Where-Object{$_.name -match "^Win32_"} | Sort-Object Name | Format-Table Name
+Get-WmiObject -Class Win32_PNPEntity -Filter "Name='USB-Massenspeichergerät'" | Select Name, HardwareID
+
+# Cim Instanzen
+Get-CimInstance -ClassName win32_operatingsystem | select csname, lastbootuptime
 
 # Disable Windows Defender
 Set-MpPreference -DisableRealtimeMonitoring $true
