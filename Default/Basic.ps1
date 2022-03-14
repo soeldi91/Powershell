@@ -43,7 +43,7 @@ Invoke-Command -ComputerName $computername -ScriptBlock {
 #WLAN Profile auslesen
 netsh wlan export profile key=clear folder=C:\temp
 
-# Gespeicherte Passwörter
+# Gespeicherte Passwörter / PWD / Password
 C:\Windows\System32\rundll32.exe keymgr.dll, KRShowKeyMgr
 
 # Eventlog
