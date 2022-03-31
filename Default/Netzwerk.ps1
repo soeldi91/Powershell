@@ -99,3 +99,14 @@ foreach($sufix in $iprange)
     if($result.PortOpened)
     {$result}
 }
+
+
+#Proxy PAC / Proxypac / WPAD / Autoprox
+# Autoprox herunterladen und entpacken in C:\Temp
+# https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/optimize-pac-performance
+
+$url = "https://windows.net"
+$proxypacfile = "https://pstofapendpointmgmt01.blob.core.windows.net/proxypac/kpt-proxy-test.pac"
+
+Set-Location "C:\Temp\autoprox"
+.\autoprox.exe -u:$url -p:$proxypacfile
