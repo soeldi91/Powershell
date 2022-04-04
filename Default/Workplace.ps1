@@ -93,3 +93,12 @@ $registryValueData = "1"
 New-Item -Path $registryPath -Force
 New-ItemProperty -Path $registryPath -Name $registryValueName -Value $registryValueData -PropertyType DWORD -Force
 
+# Windows Update
+Install-PackageProvider -Name NuGet -Force
+Install-Module -Name PSWindowsUpdate -Force
+Import-Module -Name PSWindowsUpdate
+
+## Find KBs
+Get-WUHistory -Last 100
+## Install Updates
+Install-WindowsUpdate -MicrosoftUpdate -NotKBArticleID "$noKB" -NotTitle "cumulative" -AcceptAll -IgnoreReboot | Out-File "C:\Windows\Setup\logs\winupdatedetail.log" -force
