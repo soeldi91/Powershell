@@ -17,6 +17,9 @@ gcm *-*vpn*
 # Ctrl + R
 # Suchbegriff eingeben
 
+# Modulepath
+$p = [Environment]::GetEnvironmentVariable("PSModulePath")
+
 
 #Neues Objekt
 $car =@
