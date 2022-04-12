@@ -126,3 +126,5 @@ certmgr.msc     Zertifikat-Manager (User)
 certlm.msc      Zertifikat-Manager (Computer)
 desk.cpl        Anzeigeeinstellungen
 
+# Credentials / Passwort / Passwörter
+rundll32.exe keymgr.dll,KRShowKeyMgr
