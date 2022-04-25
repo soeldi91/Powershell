@@ -98,3 +98,11 @@ $resourceGroupName = "D-RGR-KPT-KPTDEV-WVDIMAGE-01"
 Connect-AzAccount -Tenant $TenantID
 
 Get-AzVM -Name $imageVMName -resourceGroupName $resourceGroupName
+
+
+
+
+
+Connect-MsolService -Credential (Get-Credential)
+Set-MsolADFSContext -Computer secure.swissic.ch
+Get-MsolFederationProperty -DomainName xaas.swissic.ch| FL Source, TokenSigningCertificate
