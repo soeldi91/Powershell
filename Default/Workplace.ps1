@@ -102,3 +102,7 @@ Import-Module -Name PSWindowsUpdate
 Get-WUHistory -Last 100
 ## Install Updates
 Install-WindowsUpdate -MicrosoftUpdate -NotKBArticleID "$noKB" -NotTitle "cumulative" -AcceptAll -IgnoreReboot | Out-File "C:\Windows\Setup\logs\winupdatedetail.log" -force
+
+
+#Check OS Version on USB Stick
+DISM /get-wiminfo /wimfile:"G:\sources\boot.wim" /index:1
