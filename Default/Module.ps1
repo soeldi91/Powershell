@@ -1,3 +1,7 @@
+# Zum installieren von Modulen über den Proxy
+[System.Net.WebRequest]::DefaultWebProxy.Credentials =  [System.Net.CredentialCache]::DefaultCredentials
+
+
 # PowerShell verfügbare Module anzeigen
 Get-Module -ListAvailable
 
