@@ -110,3 +110,8 @@ $proxypacfile = "https://pstofapendpointmgmt01.blob.core.windows.net/proxypac/kp
 
 Set-Location "C:\Temp\autoprox"
 .\autoprox.exe -u:$url -p:$proxypacfile
+
+
+# PowerShell über PRoxy Auth für z.B. System User
+[System.Net.WebRequest]::DefaultWebProxy.Credentials =  [System.Net.CredentialCache]::DefaultCredentials
+[System.Net.WebProxy]::new("http://10.32.2.130:8083",$true)

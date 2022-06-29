@@ -1,5 +1,6 @@
 # Zum installieren von Modulen über den Proxy
 [System.Net.WebRequest]::DefaultWebProxy.Credentials =  [System.Net.CredentialCache]::DefaultCredentials
+[System.Net.WebProxy]::new("http://10.32.2.130:8083",$true)
 Register-PSRepository -Default
 
 # Zugriff notwendig! 
