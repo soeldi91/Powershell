@@ -1,5 +1,12 @@
 # Zum installieren von Modulen über den Proxy
 [System.Net.WebRequest]::DefaultWebProxy.Credentials =  [System.Net.CredentialCache]::DefaultCredentials
+Register-PSRepository -Default
+
+# Zugriff notwendig! 
+#    onegetcdn.azureedge.net - CDN hostname
+#    psg-prod-centralus.azureedge.net - CDN hostname
+#    psg-prod-eastus.azureedge.net - 
+# https://docs.microsoft.com/en-us/powershell/scripting/gallery/getting-started?view=powershell-5.1#network-access-to-the-powershell-gallery
 
 
 # PowerShell verfügbare Module anzeigen
