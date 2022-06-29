@@ -3,7 +3,12 @@
 git config --global --list
 git config --global user.name Damian Soldera
 git config --global user.email damian.soldera@swissic.ch
+git config --global http.proxy http://xaas\dsoldera@clientproxy.xaas.swissic.ch:8080
+git config --global https:.proxy http://xaas\dsoldera@clientproxy.xaas.swissic.ch:8080
 git config --global http.sslVerify false
+
+
+# Beispiel: git clone https://jg2xovac5dfzq4flybggryiirqjxzq6khefa4vqqquguecdbrzna@pbihagch.visualstudio.com/IHA-Entpoint-Management/_git/02-IHA-USBStaging
 
 #Repo Klonen
 git clone <URL>
