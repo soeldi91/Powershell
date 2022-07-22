@@ -1,5 +1,5 @@
 #Install-Module AzureAD
-Install-Module -Name Az.Accounts -Scope CurrentUser
+Install-Module -Name Az.Accounts -Scope CurrentUser test
 Import-Module -Name Az.Accounts
 
 Install-Module -Name Az.Resources -Scope CurrentUser
